@@ -6,4 +6,9 @@ public class PlayingPiece {
     PlayingPiece(PieceType pieceType) {
         this.pieceType = pieceType;
     }
+//    public String choice;
+//
+//    PlayingPiece(String choice){
+//        this.choice = choice;
+//    }
 }

@@ -6,6 +6,7 @@ import javafx.util.Pair;
 import java.util.*;
 
 public class TicTacToeGame {
+    Scanner scanner = new Scanner(System.in);
     Deque<Player> playerList;
     Board board;
 
@@ -15,11 +16,21 @@ public class TicTacToeGame {
 
     public void initializeGame(){
         playerList = new LinkedList<>();
-        PlayingPieceX crossPiece = new PlayingPieceX();
-        Player player1 = new Player("Manish", crossPiece);
+        System.out.println("Player1, pls Enter the symbol with which you want to play: ");
+        PlayingPiece player1Choice = PieceTypeMapping.fromSymbol(scanner.next());
+//        PlayingPieceX crossPiece = new PlayingPieceX();
+        Player player1 = new Player("Manish ", player1Choice);
 
-        PlayingPieceO noughtPiece = new PlayingPieceO();
-        Player player2 = new Player("Prenka", noughtPiece);
+        System.out.println("Player2, pls Enter the symbol with which you want to play: ");
+        PlayingPiece player2Choice = PieceTypeMapping.fromSymbol(scanner.next());
+//        PlayingPieceO noughtPiece = new PlayingPieceO();
+        Player player2 = new Player("Prenka ", player2Choice);
+
+        if(Objects.isNull(player1Choice) || Objects.isNull(player2Choice)){
+            System.out.println("You have not entered a valid symbol!");
+            System.out.println("Please enter a valid symbol with which you want to play: " + PieceTypeMapping.getPlayingPieces());
+            return;
+        }
 
         playerList.add(player1);
         playerList.add(player2);
@@ -29,8 +40,8 @@ public class TicTacToeGame {
 
     public String startGame(){
         boolean noWinner = true;
+        System.out.println("Welcome to Tic-Tac-Toe Game!");
         while(noWinner){
-
             Player currentPlayer = playerList.removeFirst();
             board.printBoard();
 
@@ -41,7 +52,6 @@ public class TicTacToeGame {
             }
 
             System.out.println("Player:  " + currentPlayer.name + ", Enter row, column");
-            Scanner scanner = new Scanner(System.in);
             String s = scanner.nextLine();
             String[] values = s.split(",");
             int row = Integer.parseInt(values[0]);
@@ -58,10 +68,10 @@ public class TicTacToeGame {
             boolean winner = isThereWinner(row, column, currentPlayer.playingPiece.pieceType);
             if(winner){
                 board.printBoard();
-                return currentPlayer.getName();
+                return currentPlayer.getName() + " won!";
             }
         }
-        return "Tie";
+        return "Game Tie";
     }
 
     public boolean isThereWinner(int row, int column, PieceType piece) {

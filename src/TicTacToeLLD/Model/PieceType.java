@@ -2,5 +2,6 @@ package TicTacToeLLD.Model;
 
 public enum PieceType {
     X,
-    O;
+    O,
+    D;
 }
