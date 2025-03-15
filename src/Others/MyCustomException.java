@@ -1,3 +1,5 @@
+package Others;
+
 public class MyCustomException extends Exception{
 
     MyCustomException(String s){

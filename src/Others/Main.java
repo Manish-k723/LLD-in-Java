@@ -1,27 +1,10 @@
-import com.sun.javafx.geom.BaseBounds;
-import com.sun.javafx.geom.Rectangle;
-import com.sun.javafx.geom.transform.BaseTransform;
-import com.sun.scenario.effect.Effect;
-import com.sun.scenario.effect.FilterContext;
-import com.sun.scenario.effect.ImageData;
-import com.sun.scenario.effect.impl.state.AccessHelper;
-
-import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.sql.SQLException;
-import java.sql.SQLOutput;
-import java.util.*;
-import java.util.concurrent.ConcurrentLinkedDeque;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+package Others;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException{
-//        lsit l = new lsit();
+//        Others.lsit l = new Others.lsit();
 //        l.listBehave();
-//          map m;
+//          Others.map m;
 
 //        Set<Integer> s = new HashSet<>();
 //        Integer a = 5;
@@ -38,7 +21,7 @@ public class Main {
 
 //        System.out.println(Thread.currentThread().getName());
 
-//        multiThreading obj = new multiThreading();
+//        Others.multiThreading obj = new Others.multiThreading();
 //        Thread thread1 = new Thread(obj::task1);
 //        Thread thread2 = new Thread(obj::task2);
 //        Thread thread3 = new Thread(obj::task3);

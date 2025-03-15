@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.concurrent.ConcurrentLinkedDeque;
+package Others;
 
 public class lsit {
     public lsit(){
