@@ -17,13 +17,11 @@ public class TicTacToeGame {
     public void initializeGame(){
         playerList = new LinkedList<>();
         System.out.println("Player1, pls Enter the symbol with which you want to play: ");
-        PlayingPiece player1Choice = PieceTypeMapping.fromSymbol(scanner.next());
-//        PlayingPieceX crossPiece = new PlayingPieceX();
+        PlayingPiece player1Choice = PieceTypeMapping.fromSymbol(scanner.nextLine());
         Player player1 = new Player("Manish ", player1Choice);
 
         System.out.println("Player2, pls Enter the symbol with which you want to play: ");
-        PlayingPiece player2Choice = PieceTypeMapping.fromSymbol(scanner.next());
-//        PlayingPieceO noughtPiece = new PlayingPieceO();
+        PlayingPiece player2Choice = PieceTypeMapping.fromSymbol(scanner.nextLine());
         Player player2 = new Player("Prenka ", player2Choice);
 
         if(Objects.isNull(player1Choice) || Objects.isNull(player2Choice)){
@@ -35,7 +33,9 @@ public class TicTacToeGame {
         playerList.add(player1);
         playerList.add(player2);
 
-        board = new Board(3);
+        System.out.println("Enter the size of the board, you guys want to play: ");
+        int size = Integer.parseInt(scanner.nextLine());
+        board = new Board(size);
     }
 
     public String startGame(){

@@ -7,7 +7,8 @@ import java.util.Set;
 public enum PieceTypeMapping {
     X(new PlayingPiece(PieceType.X)),
     O(new PlayingPiece(PieceType.O)),
-    D(new PlayingPiece(PieceType.D));
+    D(new PlayingPiece(PieceType.D)),
+    Y(new PlayingPiece(PieceType.Y));
 
     private final PlayingPiece piece;
     private static final Map<String, PieceTypeMapping> SYMBOL_MAP = new HashMap<>();
@@ -30,7 +31,6 @@ public enum PieceTypeMapping {
         PieceTypeMapping mapping = SYMBOL_MAP.get(symbol.toUpperCase());
         return (mapping != null) ? mapping.getPiece() : null;
     }
-
     public static Set<String> getPlayingPieces(){
         return SYMBOL_MAP.keySet();
     }
