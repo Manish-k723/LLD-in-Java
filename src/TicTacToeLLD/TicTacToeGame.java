@@ -10,11 +10,11 @@ public class TicTacToeGame {
     Deque<Player> playerList;
     Board board;
 
-    TicTacToeGame(){
+    TicTacToeGame() {
         initializeGame();
     }
 
-    public void initializeGame(){
+    public void initializeGame() {
         playerList = new LinkedList<>();
         System.out.println("Player1, pls Enter the symbol with which you want to play: ");
         PlayingPiece player1Choice = PieceTypeMapping.fromSymbol(scanner.nextLine());
@@ -24,9 +24,10 @@ public class TicTacToeGame {
         PlayingPiece player2Choice = PieceTypeMapping.fromSymbol(scanner.nextLine());
         Player player2 = new Player("Prenka ", player2Choice);
 
-        if(Objects.isNull(player1Choice) || Objects.isNull(player2Choice)){
+        if (Objects.isNull(player1Choice) || Objects.isNull(player2Choice)) {
             System.out.println("You have not entered a valid symbol!");
-            System.out.println("Please enter a valid symbol with which you want to play: " + PieceTypeMapping.getPlayingPieces());
+            System.out.println(
+                    "Please enter a valid symbol with which you want to play: " + PieceTypeMapping.getPlayingPieces());
             return;
         }
 
@@ -38,15 +39,15 @@ public class TicTacToeGame {
         board = new Board(size);
     }
 
-    public String startGame(){
+    public String startGame() {
         boolean noWinner = true;
         System.out.println("Welcome to Tic-Tac-Toe Game!");
-        while(noWinner){
+        while (noWinner) {
             Player currentPlayer = playerList.removeFirst();
             board.printBoard();
 
             List<Pair<Integer, Integer>> freeSpaces = board.getFreeCells();
-            if(freeSpaces.isEmpty()){
+            if (freeSpaces.isEmpty()) {
                 noWinner = false;
                 continue;
             }
@@ -58,7 +59,7 @@ public class TicTacToeGame {
             int column = Integer.parseInt(values[1]);
 
             boolean pieceAddedSuccessfully = board.placePiece(row, column, currentPlayer.getPlayingPiece());
-            if(!pieceAddedSuccessfully){
+            if (!pieceAddedSuccessfully) {
                 System.out.println("Position already chosen");
                 playerList.addFirst(currentPlayer);
                 continue;
@@ -66,7 +67,7 @@ public class TicTacToeGame {
 
             playerList.addLast(currentPlayer);
             boolean winner = isThereWinner(row, column, currentPlayer.playingPiece.pieceType);
-            if(winner){
+            if (winner) {
                 board.printBoard();
                 return currentPlayer.getName() + " won!";
             }
