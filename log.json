@@ -1,0 +1,53 @@
+{
+{
+  "timeStamp": "2025-07-12 15:37:10.241",
+  "level": [
+    "DEBUG"
+  ],
+  "message": "Debug Message"
+},
+{
+  "timeStamp": "2025-07-12 15:37:10.242",
+  "level": [
+    "ERROR"
+  ],
+  "message": "Error Message"
+},
+{
+  "timeStamp": "2025-07-12 15:37:23.515",
+  "level": [
+    "DEBUG"
+  ],
+  "message": "Debug Message"
+},
+{
+  "timeStamp": "2025-07-12 15:37:23.515",
+  "level": [
+    "ERROR"
+  ],
+  "message": "Error Message"
+},
+{
+  "timeStamp": "2025-07-12 15:37:44.059",
+  "level": [
+    "DEBUG"
+  ],
+  "message": "Debug Message"
+},
+{
+  "timeStamp": "2025-07-12 15:37:44.060",
+  "level": [
+    "ERROR"
+  ],
+  "message": "Error Message"
+},
+{
+  "timeStamp": "2025-07-12 15:37:44.060",
+  "level": [
+    "ERROR"
+  ],
+  "message": "Error Message"
+}
+}{"timeStamp" : "2025-07-12 15:52:42.051", "level": ["DEBUG"], "message": "Debug Message"}
+{"timeStamp" : "2025-07-12 15:53:32.420", "level": ["DEBUG"], "message": "Debug Message"}
+{"timeStamp" : "2025-07-12 15:53:38.565", "level": ["ERROR"], "message": "Error Message"}
