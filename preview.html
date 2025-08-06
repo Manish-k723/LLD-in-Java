@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timestamp Converter - Preview</title>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f7fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .preview-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .feature-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .mockup {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 30px 0;
+            color: white;
+        }
+        .mockup-window {
+            background: rgba(255,255,255,0.95);
+            border-radius: 16px;
+            padding: 30px;
+            color: #333;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .mockup-header {
+            text-align: center;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        .mockup-input {
+            background: #f8f9fa;
+            border: 2px solid #e1e5e9;
+            border-radius: 12px;
+            padding: 15px 20px;
+            width: 100%;
+            font-size: 16px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        .mockup-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            width: 100%;
+            cursor: pointer;
+        }
+        .mockup-result {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        .timestamp {
+            font-family: monospace;
+            font-size: 20px;
+            font-weight: bold;
+            background: rgba(255,255,255,0.2);
+            padding: 10px;
+            border-radius: 6px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .example-item {
+            background: #f8f9fa;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        .format-type {
+            font-weight: 600;
+            color: #667eea;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .sample-text {
+            font-family: monospace;
+            color: #555;
+        }
+        .access-info {
+            background: #e8f5e8;
+            border: 2px solid #4caf50;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .access-url {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2e7d32;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <h1>🕐 Timestamp Converter - Website Preview</h1>
+        
+        <div class="access-info">
+            <h2>🌐 Your Website is Live!</h2>
+            <p>Access your timestamp converter at:</p>
+            <div class="access-url">http://localhost:8000</div>
+            <p><small>Make sure the server is running (it currently is!)</small></p>
+        </div>
+
+        <h2>📱 How Your Website Looks:</h2>
+        
+        <div class="mockup">
+            <div class="mockup-window">
+                <div class="mockup-header">
+                    <h1>🕐 Timestamp Converter</h1>
+                    <p>Convert any date or time format to numerical timestamp</p>
+                </div>
+                
+                <div>
+                    <label style="font-weight: 600; margin-bottom: 10px; display: block;">Enter Date/Time:</label>
+                    <input class="mockup-input" value="2024-01-15" readonly>
+                    <button class="mockup-button">Convert to Timestamp</button>
+                </div>
+                
+                <div class="mockup-result">
+                    <h4>Unix Timestamp (seconds)</h4>
+                    <div class="timestamp">1705334400</div>
+                    <div style="font-size: 14px; opacity: 0.9;">Monday, January 15, 2024 at 12:00:00 AM UTC</div>
+                </div>
+                
+                <div class="mockup-result">
+                    <h4>Milliseconds Timestamp</h4>
+                    <div class="timestamp">1705334400000</div>
+                    <div style="font-size: 14px; opacity: 0.9;">ISO String: 2024-01-15T00:00:00.000Z</div>
+                </div>
+            </div>
+        </div>
+
+        <h2>🎯 Key Features:</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>🔄 Flexible Input</h3>
+                <p>Supports 15+ date formats including ISO dates, US format, European format, relative dates, and natural language.</p>
+            </div>
+            <div class="feature-card">
+                <h3>⚡ Real-time Conversion</h3>
+                <p>Converts as you type with intelligent debouncing. No need to click convert every time.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📋 Copy to Clipboard</h3>
+                <p>Click any timestamp to instantly copy it to your clipboard with visual feedback.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📱 Responsive Design</h3>
+                <p>Beautiful gradient design that works perfectly on desktop, tablet, and mobile devices.</p>
+            </div>
+        </div>
+
+        <h2>📝 Supported Date Formats:</h2>
+        <div class="examples-grid">
+            <div class="example-item">
+                <div class="format-type">ISO Date</div>
+                <div class="sample-text">2024-01-15</div>
+            </div>
+            <div class="example-item">
+                <div class="format-type">US Format</div>
+                <div class="sample-text">Jan 15, 2024</div>
+            </div>
+            <div class="example-item">
+                <div class="format-type">DD/MM/YYYY</div>
+                <div class="sample-text">15/01/2024</div>
+            </div>
+            <div class="example-item">
+                <div class="format-type">With Time</div>
+                <div class="sample-text">01-15-2024 14:30</div>
+            </div>
+            <div class="example-item">
+                <div class="format-type">Relative</div>
+                <div class="sample-text">tomorrow</div>
+            </div>
+            <div class="example-item">
+                <div class="format-type">Current</div>
+                <div class="sample-text">now</div>
+            </div>
+            <div class="example-item">
+                <div class="format-type">Timestamp</div>
+                <div class="sample-text">1705334400</div>
+            </div>
+            <div class="example-item">
+                <div class="format-type">ISO String</div>
+                <div class="sample-text">2024-01-15T10:30:00Z</div>
+            </div>
+        </div>
+
+        <h2>🚀 How to Deploy:</h2>
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 12px; margin: 20px 0;">
+            <h3>Option 1: Quick Start (Currently Running)</h3>
+            <p>Your website is already running! Just open your browser and go to <strong>http://localhost:8000</strong></p>
+            
+            <h3>Option 2: Use the Deployment Script</h3>
+            <pre style="background: #333; color: #fff; padding: 15px; border-radius: 8px; overflow-x: auto;">./deploy.sh</pre>
+            
+            <h3>Option 3: Manual Start</h3>
+            <pre style="background: #333; color: #fff; padding: 15px; border-radius: 8px; overflow-x: auto;">python3 -m http.server 8000</pre>
+        </div>
+
+        <div class="access-info">
+            <h2>🎉 Ready to Use!</h2>
+            <p>Your beautiful, fully-functional timestamp converter is ready!</p>
+            <p><strong>Open your browser and navigate to:</strong></p>
+            <div class="access-url">http://localhost:8000</div>
+        </div>
+    </div>
+</body>
+</html>
