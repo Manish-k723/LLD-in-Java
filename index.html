@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timestamp Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🕐 Timestamp Converter</h1>
+            <p>Convert any date or time format to numerical timestamp</p>
+        </header>
+
+        <main>
+            <div class="converter-card">
+                <div class="input-section">
+                    <label for="dateInput">Enter Date/Time:</label>
+                    <input 
+                        type="text" 
+                        id="dateInput" 
+                        placeholder="e.g., 2024-01-15, Jan 15 2024, tomorrow, now, etc."
+                        autocomplete="off"
+                    >
+                    <button id="convertBtn">Convert to Timestamp</button>
+                </div>
+
+                <div class="results-section" id="results">
+                    <!-- Results will be displayed here -->
+                </div>
+
+                <div class="examples-section">
+                    <h3>Supported Formats:</h3>
+                    <div class="examples-grid">
+                        <div class="example-item" data-example="2024-01-15">
+                            <span class="format">ISO Date</span>
+                            <span class="sample">2024-01-15</span>
+                        </div>
+                        <div class="example-item" data-example="Jan 15, 2024">
+                            <span class="format">US Format</span>
+                            <span class="sample">Jan 15, 2024</span>
+                        </div>
+                        <div class="example-item" data-example="15/01/2024">
+                            <span class="format">DD/MM/YYYY</span>
+                            <span class="sample">15/01/2024</span>
+                        </div>
+                        <div class="example-item" data-example="01-15-2024 14:30">
+                            <span class="format">With Time</span>
+                            <span class="sample">01-15-2024 14:30</span>
+                        </div>
+                        <div class="example-item" data-example="tomorrow">
+                            <span class="format">Relative</span>
+                            <span class="sample">tomorrow</span>
+                        </div>
+                        <div class="example-item" data-example="now">
+                            <span class="format">Current</span>
+                            <span class="sample">now</span>
+                        </div>
+                        <div class="example-item" data-example="1705334400">
+                            <span class="format">Timestamp</span>
+                            <span class="sample">1705334400</span>
+                        </div>
+                        <div class="example-item" data-example="2024-01-15T10:30:00Z">
+                            <span class="format">ISO String</span>
+                            <span class="sample">2024-01-15T10:30:00Z</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h3>About Timestamps</h3>
+                <p>Unix timestamps represent the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC. This converter supports various date formats and provides both Unix timestamps and millisecond timestamps.</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with ❤️ for easy timestamp conversion</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
